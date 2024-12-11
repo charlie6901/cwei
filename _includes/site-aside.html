@@ -7,8 +7,16 @@
 
   {% elsif page.layout == "page" or page.layout == "home" or page.layout == "blog" %}
     <section class="section  section--description">
-      <h3>{{ site.author }}</h3>
-      <p>{{ site.description }}</p>
+      <!-- <h3>{{ site.author }}</h3> -->
+      <br>
+      <img src="{{ site.author_photo | relative_url }}" 
+           alt="Photo of {{ site.author }}" 
+           class="author-photo"
+           width="250">
+      <br>
+      <span>{{ site.email }}</span>
+      <br>
+      <span>{{ site.mobile }}</span>
       {% include nav-social.html %}
     </section>
 
